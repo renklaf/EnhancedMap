@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace EnhancedMapServerNetCore
 {
-    public static class Exstentions
+    public static class Extensions
     {
         public static void Raise(this EventHandler handler, object sender = null)
         {

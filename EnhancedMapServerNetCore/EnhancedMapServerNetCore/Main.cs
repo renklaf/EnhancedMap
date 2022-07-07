@@ -125,7 +125,10 @@ namespace EnhancedMapServerNetCore
             {
                 ServerHandler serverHandler = _serverHandler = new ServerHandler(Server);
                 SaveManager.Init();
-                ConsoleManager.Init();
+                if(!HeadLess)
+                {
+                    ConsoleManager.Init();
+                }
 
                 while (IsRunning)
                 {

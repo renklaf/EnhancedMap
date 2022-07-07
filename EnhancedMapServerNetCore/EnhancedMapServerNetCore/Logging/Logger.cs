@@ -80,6 +80,10 @@ namespace EnhancedMapServerNetCore.Logging
                                 Console.ForegroundColor = ConsoleColor.White;
 
                                 Console.WriteLine($"| {log.Item3}");
+                            } 
+                            else
+                            {
+                                Console.WriteLine(log.Item3);
                             }
 
                             if (logFile != null)
@@ -87,8 +91,7 @@ namespace EnhancedMapServerNetCore.Logging
                         }
                         else
                         {
-                            if (!Core.HeadLess)
-                                Console.WriteLine(log.Item3);
+                            Console.WriteLine(log.Item3);
 
                             if (logFile != null)
                                 await logFile.WriteAsync(log.Item3);
